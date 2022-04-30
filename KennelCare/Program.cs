@@ -1,2 +1,13 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using Kennel.Database.Implementations;
+
+public class Program
+{
+    public static void Main(string [] Args)
+    {
+        using (var s = new KennelContext())
+        {
+            s.Database.EnsureCreated();
+           
+        }
+    }
+}
